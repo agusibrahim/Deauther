@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="#FFFFFF"
+	android:padding="10dp">
+
+	<ImageView
+		android:layout_height="40dp"
+		android:layout_width="40dp"
+		android:src="@drawable/ic_radio_tower"
+		android:layout_centerVertical="true"
+		android:id="@+id/itemapImageView1"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="WiFi Gratisan"
+		android:layout_toRightOf="@id/itemapImageView1"
+		android:textColor="#353535"
+		android:layout_marginLeft="10dp"
+		android:textStyle="bold"
+		android:id="@+id/ap_ssid"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="7e:27:15:08:33:a1"
+		android:layout_below="@id/ap_ssid"
+		android:layout_toRightOf="@id/itemapImageView1"
+		android:layout_marginLeft="10dp"
+		android:textColor="#676767"
+		android:id="@+id/ap_mac"/>
+
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/ap_mac"
+		android:layout_toRightOf="@id/itemapImageView1"
+		android:layout_marginLeft="10dp"
+		android:id="@+id/itemapRelativeLayout1">
+
+		<ImageView
+			android:layout_height="15dp"
+			android:layout_width="15dp"
+			android:src="@drawable/ic_lock"
+			android:id="@+id/ap_encimg"
+			android:layout_centerVertical="true"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="WPA OPEN"
+			android:layout_toRightOf="@id/ap_encimg"
+			android:textColor="#818181"
+			android:layout_marginLeft="5dp"
+			android:id="@+id/ap_enc"/>
+
+	</RelativeLayout>
+
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@drawable/ic_checkbox_marked_circle"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:id="@+id/ap_check"/>
+
+	<ProgressBar
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_below="@id/itemapRelativeLayout1"
+		android:layout_toRightOf="@id/itemapImageView1"
+		android:layout_marginLeft="10dp"
+		android:layout_toLeftOf="@id/ap_check"
+		android:layout_marginRight="20dp"
+		android:id="@+id/ap_signal"/>
+
+</RelativeLayout>
+
